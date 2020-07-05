@@ -1,0 +1,360 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ICTRC(Alumni) | Home</title>
+
+    <!-- Favicon -->
+    <%--<link rel="shortcut icon" href="Images/ictti_logo.jpeg" type="image/x-icon"/>--%>
+    <link rel="" href="Images/ictti_logo.jpeg" type="" />
+    <!-- Font awesome -->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="Login/logincss/font-awesome.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- Slick slider -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
+    <!-- Theme color -->
+    <link id="Link1" href="css/theme-color/default-theme.css" rel="stylesheet" />
+
+    <!-- Main style sheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css' />
+
+    <!-- jQuery library -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <!-- Slick slider -->
+    <script type="text/javascript" src="js/slick.js"></script>
+    <!-- Counter -->
+    <script type="text/javascript" src="js/waypoints.js"></script>
+    <script type="text/javascript" src="js/jquery.counterup.js"></script>
+    <!-- Mixit slider -->
+    <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+    <!-- Add fancyBox -->
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+     <script type="text/javascript" src="js/LanguageVaidation.js"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />    
+    <style>
+        body {
+            margin: 0;
+            /*font-family: "Lato", sans-serif;*/
+        }
+
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            /*width: 280px;*/
+            background-color: #f1f1f1;
+            /*position: fixed;*/
+            /*height: 100%;*/
+            height: 780px;
+            /*position:relative;*/
+            left: 0;
+            margin-left: 0;
+            font-size: 18px;
+            /*overflow: auto;*/
+            /*padding: 16px;*/
+        }
+
+            .sidebar a {
+                display: block;
+                color: black;
+                padding: 16px;
+                text-decoration: none;
+            }
+
+                .sidebar a.active {
+                    /*background-color: #4CAF50;*/
+                    background-color: #337ab7;
+                    color: white;
+                }
+
+                .sidebar a:hover:not(.active) {
+                    background-color: #555;
+                    color: white;
+                }
+
+        #sidenewBar {
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+            left: 0;
+            margin-left: 0;
+            font-size: 15px;
+        }
+
+            #sidenewBar a {
+                display: block;
+                color: black;
+                padding: 0px;
+                text-decoration: none;
+            }
+
+                #sidenewBar a.active {
+                    background-color: #337ab7;
+                    color: white;
+                }
+
+                #sidenewBar a:hover:not(.active) {
+                    background-color: #555;
+                    color: white;
+                }
+
+        .dropbtn {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            background-color: #f1f1f1;
+            color: black;
+            padding: 16px;
+            /*font-size: 16px;*/
+            cursor: pointer;
+            width: 195px;
+            text-align: left;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            /*top: 16px;*/
+            left: 0px;
+            width: 200px;
+            
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                background-color: #337ab7;
+            }
+                .dropdown-content a:hover {
+                    background-color: #1d7aa3;
+                    color: white;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            background-color: #1a2da4;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #555;
+            color: white;
+        }
+
+        #navbar a:hover {
+            background-color: #4b3f63;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #Bar {
+                display: block;
+            }
+
+            #horbar {
+                display: none;
+            }
+            #sidenewBar {
+                display:block;
+            }
+
+            .sidebar {
+                display: none;
+            }
+            .dropbtn {
+            padding: 0px;
+            width: 150px;
+        }
+            .dropdown {
+            width: 200px;            
+            }
+            .dropdown-content {
+            min-width: 100px;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            #Bar {
+                display: none;
+            }
+            #sidenewBar {
+                display: none;
+            }
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .required {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" style="background-color:#f1f1f1">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div style="width: 100%; height: 100px; margin: 0">
+                    <div id="mypic" style="width: 100%; height: 100px; float: left;background-image:url(Images/ps1.png);background-repeat:no-repeat;position:absolute">
+                        <%--<asp:Image ID="Image1" runat="server" ImageUrl="~/Images/ps1.png" />--%>
+                        <%--<div style="width: 100px; height: 100%; float: left; padding: 4px;">
+                            <img src="Images/ictti_logo.jpeg" style="border-radius: 50%; width: 100%; height: 100%;" />
+                        </div>
+                        <div style="width: 700px; height: 100px; float: left; padding-top: 12px">
+                            <label style="font-size: 23px; color: #0f18c3;">
+                                Information and Communication Technology Research Center<br />
+                                (IMCEITS/ICTTI)</label>
+                        </div>--%>
+                    </div>
+                    <div id="horbar">
+                        <ul id="Ul1" class="nav navbar-nav navbar-right main-nav" style="padding-top:40px">
+                            <li><a href="#">
+                                <img src="Images/userimg.png" style="border-radius: 50%; width: 30px; height: 30px;" /></a>
+                            </li>
+                            <li><a href="Default2.aspx" style="color: #000; font-weight: bold">Admin</a></li>
+                            <li><a href="AdminHomePage.aspx">Home</a></li>
+                            <li><a href="AdminCoursePage.aspx">Course</a></li>
+                            <li><a href="AdminPostPage.aspx">Post</a></li>
+                            <li><a href="AdminAboutUsPage.aspx">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynewbar" aria-expanded="false" aria-hidden="true">
+                        <%--aria-controls="navbar"--%>
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar" style="background-color: white;"></span>
+                        <span class="icon-bar" style="background-color: white;"></span>
+                        <span class="icon-bar" style="background-color: white;"></span>
+                    </button>
+                </div>
+                <div id="Bar">
+                    <div id="mynewbar" class="collapse navbar-collapse" style="border: 1px solid dotted">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">
+                                <img src="Images/userimg.png" style="border-radius: 50%; width: 30px; height: 30px;" /></a>
+                            </li>
+                            <li><a href="Default2.aspx" style="height: 30px;">Admin</a></li>
+                            <li><a href="AdminHomePage.aspx" style="height: 30px;">Home</a></li>
+                            <li><a href="AdminCoursePage.aspx" style="height: 30px;">Course</a></li>
+                            <li><a href="AdminPostPage.aspx" style="height: 30px;">Post</a></li>
+                            <li><a href="AdminAboutUsPage.aspx" style="height: 30px;">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-2" style="padding-right:0px">
+                <div style="width: 100%;">
+                    <div class="sidebar">
+                        <a href="Default2.aspx"><span class="glyphicon glyphicon-home" style="margin-right: 12px;"></span></a>
+                        <a href="AdminPage.aspx"><span class="glyphicon glyphicon-search" style="margin-right: 12px;"></span>Search</a>
+                        <a href="BatchPage.aspx"><span class="glyphicon glyphicon-list-alt" style="margin-right: 12px;"></span>Batch</a>
+                        <a href="CoursesPage.aspx"><span class="glyphicon glyphicon-tasks" style="margin-right: 12px;"></span>Courses</a>
+                        <a href="RankPage.aspx"><span class="glyphicon glyphicon-blackboard" style="margin-right: 12px;"></span>Position</a>
+                        <a href="SectorPage.aspx"><span class="glyphicon glyphicon-th-large" style="margin-right: 12px;"></span>Sector</a>
+                        <div class="dropdown">
+                            <button class="dropbtn">
+                                <span class="glyphicon glyphicon-user" style="margin-right: 12px;"></span>Student Profile                   
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="StudentProfile.aspx">Profile</a>
+                                <a href="SearchStudent.aspx">Search</a>
+                            </div>
+                        </div>
+                        <a href="GuestHomePage.aspx"><span class="glyphicon glyphicon-log-out" style="margin-right: 12px;"></span>Log Out</a>
+                    </div>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mysidebar" aria-expanded="false" aria-hidden="true">
+                        <%--aria-controls="navbar"--%>
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar" style="background-color: white;"></span>
+                        <span class="icon-bar" style="background-color: white;"></span>
+                        <span class="icon-bar" style="background-color: white;"></span>
+                    </button>
+                </div>
+                <div id="sidenewBar">
+                    <div id="mysidebar" class="collapse navbar-collapse" style="border: 1px solid dotted">
+                        <ul class="nav navbar-nav">
+                            <a href="Default2.aspx" style="height: 30px"><span class="glyphicon glyphicon-home"></span></a>
+                            <a href="AdminPage.aspx" style="height: 30px">Search</a>
+                            <a href="BatchPage.aspx" style="height: 30px">Batch</a>
+                            <a href="CoursesPage.aspx" style="height: 30px">Courses</a>
+                            <a href="RankPage.aspx" style="height: 30px">Position</a>
+                            <a href="SectorPage.aspx" style="height: 30px">Sector</a>
+                            <div class="dropdown">
+                                <button class="dropbtn" style="height: 30px">Student Profile</button>
+                                <div class="dropdown-content">
+                                    <a href="StudentProfile.aspx" style="height: 30px">Profile</a>
+                                    <a href="SearchStudent.aspx" style="height: 30px">Search</a>
+                                </div>
+                            </div>
+                            <a href="GuestHomePage.aspx" style="height: 30px">Log Out</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-lg-10 col-md-10 col-sm-10" style="padding-left:0px">
+                <div id="content">
+                    <%-- <form runat="server">--%>
+                    <section>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </section>
+                    <%-- </form> --%>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- Start footer -->
+    <footer id="mu-footer" style="bottom: 0">
+
+        <!-- start footer bottom -->
+        <div class="mu-footer-bottom">
+            <div class="container">
+                <div class="mu-footer-bottom-area">
+                    <p>Parami Rd., Near Hlaing Compus, Padamyar Hostel, Ward (12)</p>
+                    <p>Hlaing, Yangon</p>
+                    <p>01-652529, 01-652542, 01-662329</p>
+                </div>
+            </div>
+        </div>
+        <!-- end footer bottom -->
+    </footer>
+    <!-- End footer -->
+
+
+
+
+    <%--</form>--%>
+</body>
+</html>
